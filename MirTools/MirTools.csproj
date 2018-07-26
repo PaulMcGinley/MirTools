@@ -1,0 +1,404 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6AAA856A-1E77-4A84-AC7F-70E21210503A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MirTools</RootNamespace>
+    <AssemblyName>MirTools</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>0</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == '64Bit|AnyCPU'">
+    <OutputPath>bin\64Bit\</OutputPath>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == '64Bit|x64'">
+    <OutputPath>bin\x64\64Bit\</OutputPath>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == '64Bit|x86'">
+    <OutputPath>bin\x86\64Bit\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.BonusSkins.v17.1" />
+    <Reference Include="DevExpress.Charts.v17.1.Core, Version=17.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.v17.1" />
+    <Reference Include="DevExpress.Office.v17.1.Core, Version=17.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Pdf.v17.1.Core, Version=17.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.RichEdit.v17.1.Core, Version=17.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v17.1" />
+    <Reference Include="DevExpress.Sparkline.v17.1.Core" />
+    <Reference Include="DevExpress.Xpo.v17.1, Version=17.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v17.1, Version=17.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v17.1, Version=17.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v17.1.UI, Version=17.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v17.1.Wizard, Version=17.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraEditors.v17.1" />
+    <Reference Include="DevExpress.Printing.v17.1.Core" />
+    <Reference Include="DevExpress.XtraGrid.v17.1, Version=17.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v17.1, Version=17.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v17.1, Version=17.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraRichEdit.v17.1, Version=17.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraTreeList.v17.1, Version=17.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraVerticalGrid.v17.1, Version=17.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraWizard.v17.1, Version=17.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="Ionic.Zlib, Version=1.9.1.5, Culture=neutral, PublicKeyToken=edbe51ad942a3f5c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ionic.Zlib.1.9.1.5\lib\Ionic.Zlib.dll</HintPath>
+    </Reference>
+    <Reference Include="ManagedSquish, Version=2.0.0.0, Culture=neutral, PublicKeyToken=fac8b2bfeda84eab, processorArchitecture=MSIL">
+      <HintPath>..\packages\ManagedSquish.2.0.0.0\lib\net40\ManagedSquish.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.DirectX, Version=1.0.2902.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>H:\WIP Files\_Client\DirectX\Microsoft.DirectX.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.DirectX.Direct3D, Version=1.0.2902.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>H:\WIP Files\_Client\DirectX\Microsoft.DirectX.Direct3D.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.DirectX.DirectSound, Version=1.0.2902.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>H:\WIP Files\_Client\DirectX\Microsoft.DirectX.DirectSound.dll</HintPath>
+    </Reference>
+    <Reference Include="NativeSquish_x64, Version=2.0.0.0, Culture=neutral, PublicKeyToken=fac8b2bfeda84eab, processorArchitecture=AMD64">
+      <HintPath>..\packages\ManagedSquish.2.0.0.0\lib\net40\NativeSquish_x64.dll</HintPath>
+    </Reference>
+    <Reference Include="NativeSquish_x86, Version=2.0.0.0, Culture=neutral, PublicKeyToken=fac8b2bfeda84eab, processorArchitecture=x86">
+      <HintPath>..\packages\ManagedSquish.2.0.0.0\lib\net40\NativeSquish_x86.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common.cs" />
+    <Compile Include="Configuration.cs" />
+    <Compile Include="Controls\FixedListView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\FolderSelectDialog.cs" />
+    <Compile Include="Controls\MapViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\MapViewer.Designer.cs">
+      <DependentUpon>MapViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Database\ServerDetails\TfmServerDetailsDatabaseView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Database\ServerDetails\TfmServerDetailsDatabaseView.Designer.cs">
+      <DependentUpon>TfmServerDetailsDatabaseView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FileStructures\Frames.cs" />
+    <Compile Include="FileStructures\MLibraryV2.cs" />
+    <Compile Include="FileStructures\ServerDetails.cs" />
+    <Compile Include="FileStructures\WeMadeLibrary.cs" />
+    <Compile Include="FileStructures\WTLLibrary.cs" />
+    <Compile Include="FirstRunWizard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FirstRunWizard.Designer.cs">
+      <DependentUpon>FirstRunWizard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TfmDiagnosticInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TfmDiagnosticInformation.Designer.cs">
+      <DependentUpon>TfmDiagnosticInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TfmImageConverter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TfmImageConverter.Designer.cs">
+      <DependentUpon>TfmImageConverter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TfmPreviewFolderWBGWorker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TfmPreviewFolderWBGWorker.Designer.cs">
+      <DependentUpon>TfmPreviewFolderWBGWorker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TfmPreviewFolder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TfmPreviewFolder.Designer.cs">
+      <DependentUpon>TfmPreviewFolder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TfmPreviewFolderConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TfmPreviewFolderConfig.Designer.cs">
+      <DependentUpon>TfmPreviewFolderConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrameBuilder\TfmFrameBuilder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrameBuilder\TfmFrameBuilder.Designer.cs">
+      <DependentUpon>TfmFrameBuilder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Functions\ColourFromString.cs" />
+    <Compile Include="Functions\CropImage.cs" />
+    <Compile Include="Functions\MDIClientSupport.cs" />
+    <Compile Include="Functions\ProcessMonitor.cs" />
+    <Compile Include="Functions\RemoveBlack.cs" />
+    <Compile Include="Library\TfmAddImages.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Library\TfmAddImages.Designer.cs">
+      <DependentUpon>TfmAddImages.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Library\TfmLibrary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Library\TfmLibrary.Designer.cs">
+      <DependentUpon>TfmLibrary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Map\DXManager.cs" />
+    <Compile Include="Map\MapCode.cs" />
+    <Compile Include="Map\MLibrary.cs" />
+    <Compile Include="Map\TfmMap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Map\TfmMap.Designer.cs">
+      <DependentUpon>TfmMap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StartPage\Bookmarks.cs" />
+    <Compile Include="StartPage\History.cs" />
+    <Compile Include="StartPage\TfmStartPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StartPage\TfmStartPage.Designer.cs">
+      <DependentUpon>TfmStartPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TfmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TfmMain.Designer.cs">
+      <DependentUpon>TfmMain.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Controls\MapViewer.resx">
+      <DependentUpon>MapViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Database\ServerDetails\TfmServerDetailsDatabaseView.resx">
+      <DependentUpon>TfmServerDetailsDatabaseView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FirstRunWizard.resx">
+      <DependentUpon>FirstRunWizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TfmDiagnosticInformation.resx">
+      <DependentUpon>TfmDiagnosticInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TfmImageConverter.resx">
+      <DependentUpon>TfmImageConverter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TfmPreviewFolderWBGWorker.resx">
+      <DependentUpon>TfmPreviewFolderWBGWorker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TfmPreviewFolder.resx">
+      <DependentUpon>TfmPreviewFolder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TfmPreviewFolderConfig.resx">
+      <DependentUpon>TfmPreviewFolderConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrameBuilder\TfmFrameBuilder.resx">
+      <DependentUpon>TfmFrameBuilder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Library\TfmAddImages.resx">
+      <DependentUpon>TfmAddImages.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Library\TfmLibrary.resx">
+      <DependentUpon>TfmLibrary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Map\TfmMap.resx">
+      <DependentUpon>TfmMap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="StartPage\TfmStartPage.resx">
+      <DependentUpon>TfmStartPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TfmMain.resx">
+      <DependentUpon>TfmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="NPCScript\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IconGenerateGlow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IconGenerateShadow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IconRemoveShadow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IconGenerateGlow1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IconGenerateShadow1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IconRemoveShadow1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IconGenerateGlow2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bookmarks.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bookmarks %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\history-clock-button %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home-button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NoImageAvailable.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ImageError.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\down-arrow.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
